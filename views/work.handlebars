@@ -1,0 +1,36 @@
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/home">AVAILABLE PORTFOLIO</a>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                {{#each items}}
+                    <div class="card col-xs-4">
+                        <h4 class="card-title">{{title}}</h4>
+                        <a href="{{URL}}" class="btn btn-primary card-link">Visit Website</a>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <div class="form-container">
+                <h3 style="margin-bottom:40px;">Add New Project</h3>
+                <form class="form" method="POST" action="/users/work">
+                    <div class="form-group">
+                        <label for="InputTitle">Title</label>
+                        <input name = "title" type="text" class="form-control" id="InputTitle" placeholder="Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputLink">Link</label>
+                        <input name = "url" type="url" class="form-control" id="InputLink" placeholder="Link">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>

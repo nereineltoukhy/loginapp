@@ -1,0 +1,20 @@
+ <h2 class="page-header">Dashboard</h2>
+<p>Welcome to your dashboard</p> 
+<div class="row">
+        <div class="col-xs-12 col-md-8">
+            <div class="row">
+                {{#each items}}
+                <div class="row">
+                <h3>{{name}}</h3>
+                 {{#each projects}}
+
+                    <div class="card col-xs-4">
+                        <h4 class="card-title">{{title}}</h4>
+                        <a href="{{URL}}" class="btn btn-primary card-link">Visit Website</a>
+                    </div>
+                {{/each}}
+                </div>
+                 {{/each}} 
+            </div>
+        </div>
+    </div> 
